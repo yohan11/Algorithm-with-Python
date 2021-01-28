@@ -1,11 +1,18 @@
 T = int(input())
 for test in range(1, T+1):
     N = int(input())
-    data = list(map(int, list(input()))) #여백없이 주어진 숫자들을 리스트에 저장하기
-    maxN = max(data)
+    data = list(map(int, list(input())))
+    dataKey = set(data)  # 중복되지 않는 집합형으로 바꿔준다
+    dataD = {}
     count = 0
+    for i in dataKey:
+        dataD[i] = 0
     for number in data:
-        if number == maxN:
-            count += 1
-    print("#%d %d %d" % (test, maxN, count))
+        if number in dataD.keys():
+            dataD[number] += 1
+    count = max(dataD.values())
+    for key, value in dataD.items():
+        if value == count:
+            maxK = key
+    print("#%d %d %d" % (test, maxK, count))
     data.clear()
