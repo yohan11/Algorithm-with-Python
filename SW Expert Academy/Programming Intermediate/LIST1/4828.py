@@ -1,3 +1,4 @@
+#최댓값과 최솟값의 차 
 T = int(input())
 
 LISTN = []
