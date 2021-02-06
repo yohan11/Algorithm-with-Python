@@ -18,8 +18,8 @@ for TC in range(1, T+1):
         for c in range(N):
             seroDataElement += garo_data[c][b]
         sero_data.append(seroDataElement)
-    for data in sero_data:
-        for i in range(len(data)-M+1): #seroTest
+    for data in sero_data: #seroTest
+        for i in range(len(data)-M+1): 
                     if data[i:M+i] == data[i:M+i][::-1]:
                         result.append(data[i:M+i])
     print("#%d %s"%(TC,result[0]))
