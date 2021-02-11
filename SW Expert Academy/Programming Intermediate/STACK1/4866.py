@@ -9,10 +9,10 @@ for TC in range(1, T+1):
             stack.append(data[i])
         elif data[i] == ")" or data[i] == "}" or data[i] == "]":
             if len(stack) == 0:
-                stack = [data[i]]
+                stack = [0]
                 break
             elif data[i] == ")" and stack[-1] != "(" or data[i] == "}" and stack[-1] != "{" or data[i] == "]" and stack[-1] != "[":
-                stack = [data[i]]
+                stack = [0]
                 break
             else:
                 stack.pop()
