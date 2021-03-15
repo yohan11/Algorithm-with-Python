@@ -1,3 +1,4 @@
+#스위치 켜고 끄기
 CL = int(input())  # 스위치의 갯수
 SL = list(map(int, input().split()))  # 스위치의 상태
 SL.insert(0, 0)
