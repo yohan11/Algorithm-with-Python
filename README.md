@@ -11,3 +11,6 @@ SW Expert Academy
 2021-02-15 ~ 2021-02-20 : [CODE] Problem에서 연습문제 
 
 2021-02-24 ~ 2021-02-27 : [CODE] Problem에서 연습문제 
+
+Solved ac
+2021-03-08 ~ : [Bronze~Silver] 문제 풀이
