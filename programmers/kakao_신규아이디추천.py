@@ -30,5 +30,3 @@ def recommand_id(new_id):
             
     return new_id
 
-new_id=input()
-answer=recommand_id(new_id)
