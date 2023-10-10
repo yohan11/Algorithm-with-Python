@@ -1,0 +1,35 @@
+import sys
+
+sys.setrecursionlimit(10**6)
+input = sys.stdin.readline
+
+
+def dfs(n, lst):
+    global visited, answer_list, num_list
+
+    if n == M:
+        for i in range(1, len(lst)):
+            if lst[i] < lst[i - 1]:
+                return
+        answer_list.append(lst)
+        return
+
+    prev = 0
+    for j in range(N):
+        if not visited[j] and prev != num_list[j]:
+            prev = num_list[j]
+            visited[j] = True
+            dfs(n + 1, lst + [num_list[j]])
+            visited[j] = False
+
+
+N, M = map(int, input().split())
+num_list = sorted(list(map(int, input().split())))
+MAX = 10000 + 10
+visited = [False] * MAX
+
+answer_list = []
+dfs(0, [])
+
+for lst in answer_list:
+    print(*lst)
